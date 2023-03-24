@@ -7,13 +7,12 @@ function Index({ breads }) {
             <h2>Index Page</h2>
             {/* This is a JSX comment. */}
             {/* <p>I have {breads[0].name} bread!</p> */}
-
             <ul>
                 {
                     breads.map((bread, index) => {
                         return (
                             <li key={index}>
-                                <a href={`/breads/${index}`}>
+                                <a href={`/breads/${bread.id}`}>
                                     {bread.name}
                                 </a>
                             </li>
@@ -25,7 +24,6 @@ function Index({ breads }) {
                 <a href="/breads/new"><button>Add a new bread</button></a>
             </div>
         </Default>
-
     )
 }
 
